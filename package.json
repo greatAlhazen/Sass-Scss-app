@@ -1,0 +1,14 @@
+{
+  "name": "adventures_project",
+  "version": "1.0.0",
+  "description": "adventure app",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass sass/main.scss css/app.css -w"
+  },
+  "author": "Enes Uraz",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
