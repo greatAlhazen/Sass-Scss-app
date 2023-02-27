@@ -14,9 +14,124 @@ body {
   box-sizing: border-box;
 }
 
-.test {
-  font-size: 1.9rem;
-  color: #00ABE4;
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes sub-heading {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes button {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+body {
+  font-weight: 400;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+}
+
+.display-primary--heading {
+  display: block;
+  font-size: 5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.7rem;
+  backface-visibility: hidden;
+  animation: heading 1s ease-in-out;
+}
+
+.display-primary--sub-heading {
+  display: block;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 300;
+  margin-top: -2rem;
+  letter-spacing: 1rem;
+  backface-visibility: hidden;
+  animation: sub-heading 1s ease-in-out;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem 5.5rem;
+  display: inline-block;
+  background-color: #CD9C8A;
+  color: #ffffff;
+  margin-top: 2rem;
+  transition: all 0.3s;
+}
+.btn:hover {
+  transform: translateY(5px);
+  box-shadow: 0 1.6rem 2.5rem rgba(29, 29, 17, 0.4);
+  color: #CD9C8A;
+  background-color: #ffffff;
+}
+.btn:active, .btn:focus {
+  box-shadow: 0 1rem 2rem rgba(29, 29, 17, 0.4);
+  transform: translateY(2px);
+}
+.btn--animated {
+  backface-visibility: hidden;
+  animation: button 1s ease-in-out;
+}
+
+.header {
+  margin: 4rem;
+  height: 75vh;
+  background-image: linear-gradient(to left top, rgba(0, 171, 228, 0.8), rgba(34, 114, 255, 0.8)), url(../images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  .header {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
+    height: 85vh;
+  }
+}
+.header__logo-container {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+.header__logo {
+  width: 10rem;
+  height: 10rem;
+}
+.header__text-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */
