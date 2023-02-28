@@ -1,0 +1,33 @@
+.image-composition{
+    position: relative;
+
+    &__image{
+        width:55%;
+        border-radius: 3px;
+        position: absolute;
+        
+        &--image-1{
+            left:0;
+            top:-2rem;
+        }
+
+        &--image-2{
+            right: 1rem;
+            top:0;
+        }
+
+        &--image-3{
+            top:7rem;
+            left:10%;
+        }
+
+        &:hover{
+            z-index: 10;
+            transform: scale(1.1);
+        }
+    }
+
+    &:hover &__image:not(:hover){
+        filter: blur(5px);
+    }
+}

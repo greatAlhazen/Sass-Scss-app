@@ -77,6 +77,17 @@ body {
   animation: sub-heading 1s ease-in-out;
 }
 
+.display-tertiary--heading {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.display-tertiary--sub-heading {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   font-size: 2rem;
@@ -100,6 +111,34 @@ body {
 .btn--animated {
   backface-visibility: hidden;
   animation: button 1s ease-in-out;
+}
+
+.image-composition {
+  position: relative;
+}
+.image-composition__image {
+  width: 55%;
+  border-radius: 3px;
+  position: absolute;
+}
+.image-composition__image--image-1 {
+  left: 0;
+  top: -2rem;
+}
+.image-composition__image--image-2 {
+  right: 1rem;
+  top: 0;
+}
+.image-composition__image--image-3 {
+  top: 7rem;
+  left: 10%;
+}
+.image-composition__image:hover {
+  z-index: 10;
+  transform: scale(1.1);
+}
+.image-composition:hover .image-composition__image:not(:hover) {
+  filter: blur(5px);
 }
 
 .header {
@@ -132,6 +171,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.grid-row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.grid-row:not(:last-child) {
+  margin-bottom: 9rem;
+}
+.grid-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.grid-row [class^=grid-col-] {
+  float: left;
+}
+.grid-row [class^=grid-col-]:not(:last-child) {
+  margin-right: 5rem;
+}
+.grid-row .grid-col-1-of-2 {
+  width: calc((100% - 5rem) / 2);
+}
+
+.about {
+  margin: 10rem 2rem 0;
 }
 
 /*# sourceMappingURL=app.css.map */
