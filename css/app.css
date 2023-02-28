@@ -77,6 +77,25 @@ body {
   animation: sub-heading 1s ease-in-out;
 }
 
+.display-secondary {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.display-secondary--main {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline-block;
+  background-image: linear-gradient(to bottom, rgba(0, 171, 228, 0.7), rgba(34, 114, 255, 0.9));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.2s;
+}
+.display-secondary--main:hover {
+  transform: scale(1.2);
+  text-shadow: 0 2px 2px #00ABE4, -2px 5px 1px #2272FF, -4px 8px 0px #CD9C8A, -6px 1.1rem 0px #00ABE4, -8px 1.4rem 0px #2272FF, -1rem 1.7rem 0px #CD9C8A, -1.2rem 2rem 0px #2272FF, -1.4rem 2.3rem 0px #00ABE4;
+}
+
 .display-tertiary--heading {
   font-size: 3rem;
   font-weight: 800;
