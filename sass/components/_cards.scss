@@ -1,0 +1,33 @@
+.feature-card{
+    background-color: rgba($neon-blue-color, .5);
+    color:$white-color;
+    padding:3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    transition: all .2s;
+    width:100%;
+
+    &__icon{
+        font-size:7rem;
+        color:$beige-color;
+        margin-bottom:2rem;
+    }
+
+    &__heading{
+        font-size:2rem;
+        font-weight:700;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &__heading-sub{
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+}

@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -131,6 +132,21 @@ body {
   backface-visibility: hidden;
   animation: button 1s ease-in-out;
 }
+.btn--second {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background-color: #2272FF;
+  color: #ffffff;
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.btn--second:hover {
+  background-color: #1D1D11;
+  transform: translateY(7px);
+  box-shadow: 0 1.6rem 2.5rem rgba(29, 29, 17, 0.4);
+}
 
 .image-composition {
   position: relative;
@@ -158,6 +174,36 @@ body {
 }
 .image-composition:hover .image-composition__image:not(:hover) {
   filter: blur(5px);
+}
+
+.feature-card {
+  background-color: rgba(34, 114, 255, 0.5);
+  color: #ffffff;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  transition: all 0.2s;
+  width: 100%;
+}
+.feature-card__icon {
+  font-size: 7rem;
+  color: #CD9C8A;
+  margin-bottom: 2rem;
+}
+.feature-card__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.feature-card__heading-sub {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
 }
 
 .header {
@@ -213,9 +259,22 @@ body {
 .grid-row .grid-col-1-of-2 {
   width: calc((100% - 5rem) / 2);
 }
+.grid-row .grid-col-1-of-4 {
+  width: calc((100% - 3 * 5rem) / 4);
+}
 
 .about {
   margin: 10rem 2rem 0;
+}
+
+.features {
+  margin-top: 10rem;
+  padding: 15rem 5rem;
+  background-image: linear-gradient(to right, #00ABE4, #2272FF);
+  transform: skewY(-5deg);
+}
+.features > * {
+  transform: skewY(5deg);
 }
 
 /*# sourceMappingURL=app.css.map */

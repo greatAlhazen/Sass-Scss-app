@@ -31,4 +31,21 @@
         backface-visibility: hidden;
         animation: button 1s ease-in-out;
     }
+
+    &--second{
+        padding:1rem 3rem;
+        font-size:1.2rem;
+        background-color: $neon-blue-color;
+        color:$white-color;
+        display: inline-block;
+        margin-top:2rem;
+        border-radius: 4px;
+        transition: all .2s;
+
+        &:hover{
+            background-color: $dark-color;
+            transform: translateY(7px);
+            box-shadow: 0 1.6rem 2.5rem rgba($dark-color, 0.4);
+        }
+    }
 }
