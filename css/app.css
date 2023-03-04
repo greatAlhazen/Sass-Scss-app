@@ -206,6 +206,68 @@ body {
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
 }
 
+.tours-card {
+  perspective: 155rem;
+  -moz-perspective: 155rem;
+  height: 40rem;
+  position: relative;
+}
+.tours-card__side {
+  height: 40rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(29, 29, 17, 0.15);
+}
+.tours-card__side--back {
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 2rem;
+}
+.tours-card:hover .tours-card__side--front {
+  transform: rotateY(-180deg);
+}
+.tours-card:hover .tours-card__side--back {
+  transform: rotateY(0);
+}
+.tours-card__image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+.tours-card__image--image-1 {
+  background-image: linear-gradient(to left bottom, #00ABE4, #2272FF), url(../images/museum.jpg);
+}
+.tours-card__image--image-2 {
+  background-image: linear-gradient(to left bottom, #1D1D11, #2272FF), url(../images/snow-ski.jpg);
+}
+.tours-card__image--image-3 {
+  background-image: linear-gradient(to left bottom, #ffffff, #2272FF), url(../images/forest-hiking.jpg);
+}
+.tours-card__heading {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.tours-card__options {
+  margin: 5rem;
+}
+.tours-card__options ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.tours-card__options li {
+  font-size: 1.4rem;
+}
+
 .header {
   margin: 4rem;
   height: 75vh;
@@ -259,6 +321,9 @@ body {
 .grid-row .grid-col-1-of-2 {
   width: calc((100% - 5rem) / 2);
 }
+.grid-row .grid-col-1-of-3 {
+  width: calc((100% - 2 * 5rem) / 3);
+}
 .grid-row .grid-col-1-of-4 {
   width: calc((100% - 3 * 5rem) / 4);
 }
@@ -275,6 +340,11 @@ body {
 }
 .features > * {
   transform: skewY(5deg);
+}
+
+.tours {
+  margin-top: 10rem;
+  padding: 2rem 4rem;
 }
 
 /*# sourceMappingURL=app.css.map */
