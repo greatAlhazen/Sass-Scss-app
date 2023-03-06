@@ -1,0 +1,53 @@
+.story{
+    width:80%;
+    margin:0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5em 10em -2em, rgba(0, 0, 0, 0.3) 0px 3em 6em -3em, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 5px;
+    padding:5rem;
+    transform: skewX(-10deg);
+    min-height:20rem;
+
+    &__main{
+        width:10rem;
+        height:10rem;
+        float:left;
+        transform: translateX(-4rem) skewX(10deg);
+        clip-path: circle(60% at 70% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+
+    }
+
+    &__image{
+        height:100%;
+        object-fit: cover;
+        transform: translate(-2rem,-1rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .7s;
+
+        &--detail{
+            position:absolute;
+            top:-42%;
+            left:50%;
+            font-size:1rem;
+            color:$white-color;
+            backface-visibility: hidden;
+            text-transform: capitalize;
+            opacity: 1;
+            transition: all .7s;
+        }
+
+    }
+
+    &:hover &__image--detail{
+        opacity:1;
+        top:35%;
+    }
+
+    &:hover &__image{
+        transform: translate(-2rem,-1rem) scale(1);
+        filter: blur(4px) brightness(70%);
+    }
+
+
+}
