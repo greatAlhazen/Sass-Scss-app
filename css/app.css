@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -149,6 +150,40 @@ body {
   background-color: #1D1D11;
   transform: translateY(7px);
   box-shadow: 0 1.6rem 2.5rem rgba(29, 29, 17, 0.4);
+}
+.btn--inline {
+  padding: 1rem 6rem;
+  font-size: 2rem;
+  border: 1px solid rgba(29, 29, 17, 0.7);
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s;
+  position: relative;
+  z-index: 2;
+}
+.btn--inline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2272FF;
+  z-index: -1;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.6s;
+}
+.btn--inline:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+.btn--inline:hover {
+  color: #ffffff;
 }
 
 .image-composition {
@@ -332,6 +367,94 @@ body {
   filter: blur(4px) brightness(70%);
 }
 
+.form__box:not(:last-child) {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.form__heading {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.form__input {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  width: 100%;
+  border: 2px solid rgba(29, 29, 17, 0.7);
+  transition: all 0.4s;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(29, 29, 17, 0.1);
+  border: 2px solid rgba(0, 255, 0, 0.8);
+}
+.form__input:focus:invalid {
+  border: 2px solid rgba(255, 0, 0, 0.9);
+}
+.form__input::-webkit-input-placeholder {
+  color: rgba(29, 29, 17, 0.4);
+}
+.form__label {
+  font-size: 1rem;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-weight: 900;
+  text-transform: capitalize;
+  display: block;
+  transition: all 0.4s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-4rem);
+}
+.form__radio-box {
+  display: inline-block;
+}
+.form__radio-box:not(:last-child) {
+  margin-right: 2rem;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-label {
+  font-size: 1.7rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3.6rem;
+}
+.form__radio-custom {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #CD9C8A;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+.form__radio-custom::after {
+  content: "✓";
+  display: block;
+  position: absolute;
+  font-size: 4rem;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.form__radio-input:checked ~ .form__radio-label .form__radio-custom::after {
+  opacity: 1;
+}
+.form__box:last-child {
+  text-align: center;
+}
+
 .header {
   margin: 4rem;
   height: 75vh;
@@ -417,6 +540,22 @@ body {
 }
 .stories__container {
   padding: 2rem 4rem;
+}
+
+.contact {
+  padding: 3rem 5rem;
+  background-image: linear-gradient(to bottom, #ffffff, #CD9C8A);
+}
+.contact__container {
+  background-image: linear-gradient(100deg, rgba(0, 171, 228, 0.9) 0%, rgba(34, 114, 255, 0.9) 60%, transparent 100%), url(../images/snow.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -2.3em 2.5em 0px inset, rgba(0, 0, 0, 0.15) 0px -3.6em 3em 0px inset, rgba(0, 0, 0, 0.1) 0px -7.9em 4em 0px inset, rgba(0, 0, 0, 0.06) 0px 0.2em 0.1em, rgba(0, 0, 0, 0.09) 0px 0.4em 0.2em, rgba(0, 0, 0, 0.09) 0px 0.8em 0.4em, rgba(0, 0, 0, 0.09) 0px 1.6em 0.8em, rgba(0, 0, 0, 0.09) 0px 3.2em 1.6em;
+}
+.contact__form {
+  width: 60%;
+  padding: 7rem;
 }
 
 /*# sourceMappingURL=app.css.map */

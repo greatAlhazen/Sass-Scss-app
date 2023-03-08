@@ -1,0 +1,105 @@
+.form{
+
+    &__box:not(:last-child){
+        margin-bottom:2rem;
+        position: relative;
+    }
+
+    &__heading{
+        font-size:3.5rem;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom:2rem;
+        text-transform: capitalize;
+    }
+
+    &__input{
+        font-size: 1.5rem;
+        padding:1rem 1.5rem;
+        border-radius: 4px;
+        width:100%;
+        border:2px solid rgba($dark-color, .7);
+        transition: all .4s;
+
+        &:focus {
+            outline:none;
+            box-shadow: 0 1rem 2rem rgba($dark-color, .1);
+            border: 2px solid rgba($green-color, .8);
+        }
+
+        &:focus:invalid {
+            border:2px solid rgba($red-color, .9);
+        }
+
+        &::-webkit-input-placeholder {
+            color: rgba($dark-color,.4);
+        }
+    }
+
+    &__label {
+        font-size: 1rem;
+        position: absolute;
+        top:-2rem;
+        left:0;
+        font-weight: 900;
+        text-transform: capitalize;
+        display: block;
+        transition: all .4s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-4rem);
+    }
+
+    &__radio-box {
+        display: inline-block;
+        
+        &:not(:last-child){
+            margin-right:2rem;
+        }
+    }
+
+    &__radio-input{
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: 1.7rem;
+        cursor: pointer;
+        position: relative;
+        padding-left: 3.6rem;
+    }
+
+    &__radio-custom {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $beige-color;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "\2713";
+            display: block;
+            position: absolute;
+            font-size: 4rem;
+            top: 30%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-custom::after {
+        opacity: 1;
+    }
+
+    &__box:last-child{
+        text-align: center;
+    }
+}

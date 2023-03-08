@@ -26,3 +26,22 @@
         padding:2rem 4rem;
     }
 }
+
+.contact{
+    padding:3rem 5rem;
+    background-image: linear-gradient(to bottom, $white-color,$beige-color );
+
+    &__container{
+        background-image: linear-gradient(100deg,rgba($blue-color,0.9) 0%,rgba($neon-blue-color,0.9) 60%,transparent 100%),
+        url(../images/snow.jpg);
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -2.3em 2.5em 0px inset, rgba(0, 0, 0, 0.15) 0px -3.6em 3em 0px inset, rgba(0, 0, 0, 0.1) 0px -7.9em 4em 0px inset, rgba(0, 0, 0, 0.06) 0px .2em .1em, rgba(0, 0, 0, 0.09) 0px .4em .2em, rgba(0, 0, 0, 0.09) 0px .8em .4em, rgba(0, 0, 0, 0.09) 0px 1.6em .8em, rgba(0, 0, 0, 0.09) 0px 3.2em 1.6em;
+    }
+
+    &__form{
+        width:60%;
+        padding:7rem;
+    }
+}
