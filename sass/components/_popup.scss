@@ -27,6 +27,7 @@
         top:50%;
         left:50%;
         transform: translate(50%,-50%);
+
     }
 
     &:target &__main {
@@ -53,6 +54,10 @@
         left:50%;
         transform: translate(-65%,-50%);
         object-fit: cover;
+
+        @include responsive(phone) {
+            height: 100%;
+            }
     }
 
     &__heading{
@@ -74,6 +79,15 @@
         -webkit-hyphens: auto;
         hyphens: auto;
         margin-bottom: 2rem;
+
+        @include responsive(desktop) {
+            font-size: 1rem;
+        }
+
+        @include responsive(phone) {
+            column-count: 1;
+            -moz-column-count: 1;
+        }
     }
 
     &__button{

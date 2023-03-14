@@ -1,38 +1,44 @@
-.header{
-    margin:4rem;
-    height:75vh;
-    background-image: linear-gradient(
-        to left top,
-        rgba($blue-color, 0.8),
-        rgba($neon-blue-color, 0.8)),
-    url(../images/header.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.header {
+	margin: 4rem;
+	height: 75vh;
+	background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
+		url(../images/header.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
 
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        -webkit-clip-path:polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
 
-        height: 85vh;
-    }
+		height: 85vh;
+	}
 
-    &__logo-container{
-        position: absolute;
-        top:-1rem;
-        left:-1rem;
-    }
+	@include responsive(desktop) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
 
-    &__logo{
-        width:10rem;
-        height:10rem;
-    }
+	&__logo-container {
+		position: absolute;
+		top: -1rem;
+		left: -1rem;
+	}
 
-    &__text-container{
-        position: absolute;
-        top:30%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-    }
+	&__logo {
+		width: 10rem;
+		height: 10rem;
+	}
+
+	&__text-container {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+
+		@include responsive(desktop) {
+            top:50%;
+		}
+	}
 }

@@ -55,6 +55,14 @@
 
     &__radio-box {
         display: inline-block;
+
+        @include responsive(phone) {
+           display: block;
+
+           &:not(:last-child){
+            margin-bottom: 1.5rem;
+           }
+        }
         
         &:not(:last-child){
             margin-right:2rem;

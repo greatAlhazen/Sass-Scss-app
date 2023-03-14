@@ -43,5 +43,9 @@
     &__form{
         width:60%;
         padding:7rem;
+
+        @include responsive(tablet) {
+            width:100%;
+            }
     }
 }

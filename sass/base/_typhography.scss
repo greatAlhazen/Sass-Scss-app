@@ -12,6 +12,17 @@ body {
 	letter-spacing: 1.7rem;
 	backface-visibility: hidden;
 	animation: heading 1s ease-in-out;
+
+	@include responsive(desktop){
+		font-size:3rem;
+		margin-bottom: 1rem;
+		letter-spacing: .5rem;
+	}
+
+	@include responsive(phone){
+		font-size:2rem;
+		margin-bottom: 1.5rem;
+	}
 }
 
 .display-primary--sub-heading {
@@ -23,6 +34,11 @@ body {
 	letter-spacing: 1rem;
 	backface-visibility: hidden;
 	animation: sub-heading 1s ease-in-out;
+
+	@include responsive(desktop){
+		letter-spacing: .3rem;
+		font-size:1.5rem;
+	}
 }
 
 .display-secondary {
@@ -44,7 +60,14 @@ body {
 			text-shadow: 0 2px 2px $blue-color, -2px 5px 1px $neon-blue-color, -4px 8px 0px $beige-color, -6px 1.1rem 0px $blue-color,
 				-8px 1.4rem 0px $neon-blue-color, -1rem 1.7rem 0px $beige-color, -1.2rem 2rem 0px $neon-blue-color, -1.4rem 2.3rem 0px $blue-color;
 		}
+
+		@include responsive(phone){
+			font-size:2rem;
+		}
 	}
+
+
+
 
 	&--stories{
 		margin-top:10rem;
@@ -54,6 +77,10 @@ body {
 .display-tertiary--heading {
 	font-size: 3rem;
 	font-weight: 800;
+
+	@include responsive(phone){
+		font-size:2rem;
+	}
 }
 
 .display-tertiary--sub-heading {

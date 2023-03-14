@@ -4,7 +4,17 @@
 
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;
+		
 	}
+
+	@include responsive(tablet) {
+		max-width: 60rem;
+	}
+
+	@include responsive(phone) {
+		max-width: 40rem;
+	}
+
 
 	@include clearfix;
 
@@ -13,6 +23,15 @@
 
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
+
+			@include responsive(tablet) {
+				margin-right: 0;
+				margin-bottom: $gutter-horizontal;
+			}
+		}
+
+		@include responsive(tablet){
+			width:100% !important;
 		}
 	}
 

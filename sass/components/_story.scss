@@ -7,6 +7,16 @@
     transform: skewX(-10deg);
     min-height:20rem;
 
+    @include responsive(tablet) {
+        width: 100%;
+        padding: 5rem;
+        padding-left: 4rem;
+    }
+
+    @include responsive(phone) {
+        transform: skewX(0);
+    }
+
     &__main{
         width:10rem;
         height:10rem;
@@ -15,6 +25,14 @@
         clip-path: circle(60% at 70% 50%);
         shape-outside: circle(50% at 50% 50%);
         position: relative;
+        
+        @include responsive(desktop) {
+          margin-bottom:1rem;
+        }
+
+        @include responsive(phone) {
+            transform: skewX(0) translateX(-4rem);
+        }
 
     }
 
