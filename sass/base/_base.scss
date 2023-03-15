@@ -32,3 +32,8 @@ a {
 	cursor: pointer;
 	color: inherit;
 }
+
+::selection {
+    background-color: $blue-color;
+    color: $white-color;
+}

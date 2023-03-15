@@ -94,15 +94,37 @@
 		background-blend-mode: screen;
 
 		&--image-1 {
-			background-image: linear-gradient(to left bottom, $blue-color, $neon-blue-color), url(../images/museum.jpg);
+			background-image: linear-gradient(to left bottom, $blue-color, $neon-blue-color),
+				url(../images/museum_small.jpg);
+
+			@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+				only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+				only screen and (min-width: 125em) {
+				background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
+					url(../images/museum.jpg);
+			}
 		}
 		&--image-2 {
 			background-image: linear-gradient(to left bottom, $dark-color, $neon-blue-color),
-				url(../images/snow-ski.jpg);
+				url(../images/snow-ski_small.jpg);
+
+			@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+				only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+				only screen and (min-width: 125em) {
+				background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
+					url(../images/snow-ski.jpg);
+			}
 		}
 		&--image-3 {
 			background-image: linear-gradient(to left bottom, $white-color, $neon-blue-color),
-				url(../images/forest-hiking.jpg);
+				url(../images/forest-hiking_small.jpg);
+
+			@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+				only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+				only screen and (min-width: 125em) {
+				background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
+					url(../images/forest-hiking.jpg);
+			}
 		}
 	}
 

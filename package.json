@@ -4,11 +4,20 @@
   "description": "adventure app",
   "main": "index.js",
   "scripts": {
-    "watch": "sass sass/main.scss css/app.css -w"
+    "watch": "sass sass/main.scss css/app.css -w",
+    "compile": "sass sass/main.scss css/app.comp.css",
+    "concat": "concat -o css/app.concat.css css/icon-font.css css/app.comp.css",
+    "prefix": "postcss --use autoprefixer -b 'last 10 versions' css/app.concat.css -o css/app.prefix.css",
+    "compress": "sass css/app.prefix.css css/app.css --style compressed",
+    "build": "npm-run-all compile concat prefix compress"
   },
   "author": "Enes Uraz",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.58.3"
   }
 }

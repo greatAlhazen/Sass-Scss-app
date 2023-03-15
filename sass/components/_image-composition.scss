@@ -27,8 +27,8 @@
 
 			@include responsive(tablet) {
 				left: -1rem;
-                transform: scale(1.4);
-                z-index: 50;
+				transform: scale(1.4);
+				z-index: 16;
 			}
 		}
 
@@ -45,6 +45,13 @@
 		&:hover {
 			z-index: 10;
 			transform: scale(1.1);
+		}
+
+		@include responsive(tablet) {
+			&:hover {
+				transform: scale(1.4) !important;
+				z-index: 50 !important;
+			}
 		}
 	}
 

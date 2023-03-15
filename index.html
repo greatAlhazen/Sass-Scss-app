@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/icon-font.css">
+<!--     <link rel="stylesheet" href="css/icon-font.css"> -->
     <link rel="stylesheet" href="css/app.css">
     <title>Adventure App</title>
 </head>
@@ -33,7 +34,7 @@
     
     <header class="header">
         <div class="header__logo-container">
-            <img src="images/logo.png" class="header__logo" alt="headerPhoto">
+            <img srcset="images/logo_1x.png 1x, images/logo_2x.png 2x" alt="Full logo" class="header__logo" src="images/logo_2x.png">
         </div>
         <div class="header__text-container">
             <h1 class="display-primary--heading">The journey</h1>
@@ -64,9 +65,23 @@
                 </div>
                 <div class="grid-col-1-of-2">
                     <div class="image-composition">
-                        <img src="images/forest.jpg" alt="image 1" class="image-composition__image image-composition__image--image-1">
-                        <img src="images/mountain.jpg" alt="image 2" class="image-composition__image image-composition__image--image-2">
-                        <img src="images/snow.jpg" alt="image 3" class="image-composition__image image-composition__image--image-3">
+                        <img srcset="images/forest_small.jpg 300w, images/forest.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                        alt="Image 1"
+                        class="image-composition__image image-composition__image--image-1"
+                        src="images/forest.jpg">
+
+                   <img srcset="images/mountain_small.jpg 300w, images/mountain.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                        alt="Image 2"
+                        class="image-composition__image image-composition__image--image-2"
+                        src="images/mountain.jpg">
+
+                   <img srcset="images/snow_small.jpg 300w, images/snow.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                        alt="Image 3"
+                        class="image-composition__image image-composition__image--image-3"
+                        src="images/snow.jpg">
                     </div>
                 </div>
             </div>
@@ -78,7 +93,7 @@
                     <i class="feature-card__icon icon-basic-battery-empty"></i>
                     <h3 class="feature-card__heading">Charge yourself</h3>
                     <p class="feature-card__heading-sub">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium pariatur ea fuga alias cumque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                     </p>
                     </div>
                 </div>
@@ -87,7 +102,7 @@
                     <i class="feature-card__icon icon-basic-book-pen"></i>
                     <h3 class="feature-card__heading">Read and write</h3>
                     <p class="feature-card__heading-sub">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium pariatur ea fuga alias cumque?
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                     </p>
                     </div>
                 </div>
@@ -96,7 +111,7 @@
                     <i class="feature-card__icon icon-basic-calendar"></i>
                     <h3 class="feature-card__heading">Adjust yourself</h3>
                     <p class="feature-card__heading-sub">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium pariatur ea fuga alias cumque?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                     </p>
                 </div>
                 </div>
@@ -105,7 +120,7 @@
                     <i class="feature-card__icon icon-basic-photo"></i>
                     <h3 class="feature-card__heading">Caption moment</h3>
                     <p class="feature-card__heading-sub">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium pariatur ea fuga alias cumque?
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                     </p>
                     </div>
                 </div>
@@ -199,18 +214,19 @@
             <div class="grid-row">
                 <div class="story">
                     <figure class="story__main">
-                        <img src="images/person1.jpg" alt="Person" class="story__image">
+                        <img srcset="images/person1_small.jpg 300w, images/person1.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                        alt="Person photo"
+                        class="story__image"
+                        src="images/person1.jpg">
                         <figcaption class="story__image--detail">Wonder woman</figcaption>
                     </figure>
                     <div class="story__detail">
                         <h4 class="story__heading">This is absolutely amazing</h4>
                         <p class="story__heading--sub">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero                            
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.                         
                         </p>
                     </div>
                 </div>
@@ -219,18 +235,19 @@
             <div class="grid-row">
                 <div class="story">
                     <figure class="story__main">
-                        <img src="images/person2.jpg" alt="Person" class="story__image">
+                        <img srcset="images/person2_small.jpg 300w, images/person2.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                        alt="Person photo-2"
+                        class="story__image"
+                        src="images/person2.jpg">
                         <figcaption class="story__image--detail">Mother Dragon</figcaption>
                     </figure>
                     <div class="story__detail">
                         <h4 class="story__heading">This is absolutely amazing</h4>
                         <p class="story__heading--sub">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero                            
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.                     
                         </p>
                     </div>
                 </div>
@@ -290,7 +307,7 @@
 
     <footer class="footer">
         <div class="footer__logo-container">
-                <img src="images/logo.png" alt="logo" class="footer__logo">
+            <img srcset="images/logo_1x.png 1x, images/logo_2x.png 2x" alt="Footer logo" class="footer__logo" src="images/logo_2x.png">
         </div>
 
         <div class="grid-row">
@@ -315,17 +332,24 @@
     <div class="detail-popup" id="popup">
         <div class="detail-popup__main">
             <div class="detail-popup__image-box">
-                <img src="images/forest.jpg" alt="Detail Image" class="detail-popup__image">
+                <img srcset="images/forest_small.jpg 300w, images/forest.jpg 1000w"
+                    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                    alt="Detail image"
+                    class="detail-popup__image"
+                    src="images/forest.jpg">
             </div>
             <div class="detail-popup__content">
                 <h3 class="detail-popup__heading">This covers everything</h3>
                 <p class="detail-popup__pharagraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
-                    amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
-                    sitLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
-                    amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
+                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
+                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                        euismod nisi porta.
                 </p>
                 <div class="detail-popup__button">
                 <a href="#" class="btn--inline">Reservation now</a>

@@ -2,7 +2,7 @@
 	margin: 4rem;
 	height: 75vh;
 	background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
-		url(../images/header.jpg);
+		url(../images/header_small.jpg);
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -12,6 +12,13 @@
 		clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 65vh 65vh, 65vh 100%, 50vh 65vh, 0 65vh);
 
 		height: 85vh;
+	}
+
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		only screen and (min-width: 125em) {
+			background-image: linear-gradient(to left top, rgba($blue-color, 0.8), rgba($neon-blue-color, 0.8)),
+			url(../images/header.jpg);
 	}
 
 	@include responsive(desktop) {
@@ -38,7 +45,7 @@
 		text-align: center;
 
 		@include responsive(desktop) {
-            top:50%;
+			top: 50%;
 		}
 	}
 }
