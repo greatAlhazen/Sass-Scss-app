@@ -16,7 +16,11 @@ A site built with excellent css features and animations
 git clone git@github.com:greatAlhazen/Sass-Scss-app.git
 ```
 
-- Get into main directory
+- Get into main directory and execute two commands in order
+
+```
+npm install
+```
 
 ```
 npm run watch
@@ -34,7 +38,7 @@ npm run build
 ```
 main/
 ├── css/     
-|── fonts/
+|   |── fonts/
 |── images/
 ├── index.html
 ├── sass/
