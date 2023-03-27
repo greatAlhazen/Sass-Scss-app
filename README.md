@@ -16,7 +16,7 @@ A site built with excellent css features and animations
 git clone git@github.com:greatAlhazen/Sass-Scss-app.git
 ```
 
-- Get into main directory and execute two commands in order
+- Get into main directory and execute these two commands in order
 
 ```
 npm install
@@ -26,8 +26,8 @@ npm install
 npm run watch
 ```
 
-- after those you can freely modify css or images folder and index.html file
-- when the change is done get into terminal
+- After those you can modify sass or images folder and index.html file
+- When the change is done get into terminal
 
 ```
 npm run build
